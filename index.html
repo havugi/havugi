@@ -1,0 +1,62 @@
+<?php 
+
+include_once ('bddconnexion.php');
+
+?>
+
+
+<!DOCTYPE html> 
+<html> 
+ 	<head>  
+<meta charset="utf-8">  <title>Les Formulaires</title>  
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="js/bootstrap.js">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>  
+ 
+<body>  
+<form method = "POST" action = "login.php"> 
+    <?php include('errors.php');?>
+  <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1 class="text-center">LOG  IN</h1>
+                    
+                    <label class="label control-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" class="form-control" name="nom" placeholder="Votre nom">
+                    </div>
+                    <label class="label control-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                        <input type="checkbox"> <small>Remember me</small>
+                    </div>
+                        <div class="col-md-6">
+                            <a href="#"><p class="text-right">Forget Password</p></a>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="input-group">
+                        <button type="submit" name="login" class="btn btn-primary btn-block btn-lg">LOGIN</button>
+                    </div> <p class="text-center">Not a member yet?<a href="register.php"> Sign Up</a></p>
+
+                    
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-5"></div>
+            
+            </div>
+        
+        </div>
+
+</form> 
+</body> 
+</html>  
